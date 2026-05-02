@@ -670,6 +670,9 @@ section {
     grid-template-columns: 1fr;
   }
 
+  .date-input {
+    width: 100%;
+  }
   .book-form {
     grid-column: 1 / 2;
     width: 100%;
