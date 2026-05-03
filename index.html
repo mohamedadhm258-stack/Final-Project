@@ -14,7 +14,8 @@
   <link rel="stylesheet" href="style.css">
 </head>
 
-<body>
+<body data-bs-spy="scroll" data-bs-target="#feaneNav" data-bs-root-margin="0px 0px -40%"
+  tabindex="0">
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark-custom">
     <div class="container-fluid px-lg-5">
       <div class="logo">
@@ -26,53 +27,55 @@
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse text-center" id="feaneNav">
-        <ul class="navbar-nav mx-auto mb-2 mb-lg-0 navbar-links">
-          <li class="nav-item">
-            <a class="nav-link" href="#home">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#menu">Menu</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#about">About</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#book">Book Table</a>
-          </li>
-        </ul>
-        <div
-          class="main-nav-links-right d-flex flex-column flex-lg-row align-items-center justify-content-center gap-3">
-          <div class="nav-icons d-flex gap-3">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24"
-              class="log-icon">
-              <path
-                d="M12 12c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5m0-8c1.65 0 3 1.35 3 3s-1.35 3-3 3-3-1.35-3-3 1.35-3 3-3M4 22h16c.55 0 1-.45 1-1v-1c0-3.86-3.14-7-7-7h-4c-3.86 0-7 3.14-7 7v1c0 .55.45 1 1 1m6-7h4c2.76 0 5 2.24 5 5H5c0-2.76 2.24-5 5-5">
-              </path>
-            </svg>
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
-              <path
-                d="M21 6H7.05L5.94 2.68A1 1 0 0 0 4.99 2h-3v2h2.28l3.54 10.63A2 2 0 0 0 9.71 16h7.59a2 2 0 0 0 1.87-1.3l2.76-7.35c.11-.31.07-.65-.11-.92A1 1 0 0 0 21 6m-3.69 8H9.72l-2-6h11.84zM10 18a2 2 0 1 0 0 4 2 2 0 1 0 0-4m7 0a2 2 0 1 0 0 4 2 2 0 1 0 0-4">
-              </path>
-            </svg>
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#ffffff" viewBox="0 0 24 24">
-              <path
-                d="M18 10c0-4.41-3.59-8-8-8s-8 3.59-8 8 3.59 8 8 8c1.85 0 3.54-.63 4.9-1.69l5.1 5.1L21.41 20l-5.1-5.1A8 8 0 0 0 18 10M4 10c0-3.31 2.69-6 6-6s6 2.69 6 6-2.69 6-6 6-6-2.69-6-6">
-              </path>
-            </svg>
+        <div class="nav-inner-wrapper w-100 d-flex flex-column flex-lg-row align-items-center">
+          <ul class="navbar-nav mx-auto mb-2 mb-lg-0 navbar-links">
+            <li class="nav-item">
+              <a class="nav-link" href="#home">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#menu">Menu</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#about">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#book">Book Table</a>
+            </li>
+          </ul>
+          <div
+            class="main-nav-links-right d-flex flex-column flex-lg-row align-items-center justify-content-center gap-3">
+            <div class="nav-icons d-flex gap-3">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24"
+                class="log-icon">
+                <path
+                  d="M12 12c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5m0-8c1.65 0 3 1.35 3 3s-1.35 3-3 3-3-1.35-3-3 1.35-3 3-3M4 22h16c.55 0 1-.45 1-1v-1c0-3.86-3.14-7-7-7h-4c-3.86 0-7 3.14-7 7v1c0 .55.45 1 1 1m6-7h4c2.76 0 5 2.24 5 5H5c0-2.76 2.24-5 5-5">
+                </path>
+              </svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+                <path
+                  d="M21 6H7.05L5.94 2.68A1 1 0 0 0 4.99 2h-3v2h2.28l3.54 10.63A2 2 0 0 0 9.71 16h7.59a2 2 0 0 0 1.87-1.3l2.76-7.35c.11-.31.07-.65-.11-.92A1 1 0 0 0 21 6m-3.69 8H9.72l-2-6h11.84zM10 18a2 2 0 1 0 0 4 2 2 0 1 0 0-4m7 0a2 2 0 1 0 0 4 2 2 0 1 0 0-4">
+                </path>
+              </svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#ffffff" viewBox="0 0 24 24">
+                <path
+                  d="M18 10c0-4.41-3.59-8-8-8s-8 3.59-8 8 3.59 8 8 8c1.85 0 3.54-.63 4.9-1.69l5.1 5.1L21.41 20l-5.1-5.1A8 8 0 0 0 18 10M4 10c0-3.31 2.69-6 6-6s6 2.69 6 6-2.69 6-6 6-6-2.69-6-6">
+                </path>
+              </svg>
+            </div>
+            <button class="order-button">Order Online</button>
           </div>
-          <button class="order-button">Order Online</button>
         </div>
       </div>
     </div>
   </nav>
   <section class="hero-section" id="home">
     <div class="hero-section-text">
-        <h2 class="hero-section-title">Enjoy Your Meal</h2>
-        <p class="hero-section-para">
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsam
-          voluptates quisquam aliquid perspiciatis labore dolorum officiis unde
-          laborum in aspernatur, repellat incidunt.
-        </p>
+      <h2 class="hero-section-title">Enjoy Your Meal</h2>
+      <p class="hero-section-para">
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsam
+        voluptates quisquam aliquid perspiciatis labore dolorum officiis unde
+        laborum in aspernatur, repellat incidunt.
+      </p>
       <button class="hero-section-button">order now</button>
     </div>
     <img class="herosection-image" src="hero.png" alt="photo">

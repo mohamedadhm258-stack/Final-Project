@@ -61,7 +61,8 @@ html {
   transition: 0.3s;
 }
 
-.nav-link:hover {
+.nav-link:hover,
+.nav-link.active {
   color: var(--main-yellow) !important;
 }
 
@@ -96,7 +97,7 @@ html {
 }
 
 @media (max-width: 991px) {
-  .navbar-collapse {
+  .nav-inner-wrapper {
     background-color: var(--bg-dark);
     padding: 20px;
     margin-top: 15px;
@@ -122,6 +123,7 @@ section {
   padding: 20px;
   background-color: #333;
 }
+
 .herosection-image {
   width: 50%;
   height: auto;
@@ -673,6 +675,7 @@ section {
   .date-input {
     width: 100%;
   }
+
   .book-form {
     grid-column: 1 / 2;
     width: 100%;
@@ -752,8 +755,6 @@ section {
   color: lightgray;
 }
 
-
-
 .footer-feane {
   display: flex;
   flex-direction: column;
@@ -768,7 +769,7 @@ section {
   color: lightgray;
 }
 
-.footer-icons , .first {
+.footer-icons, .first {
   display: flex;
   align-items: center;
   gap: 10px;
@@ -818,9 +819,8 @@ hr {
   }
 }
 
-@media screen and (max-width:500px){
-  .footer-icons , .first {
+@media screen and (max-width:500px) {
+  .footer-icons, .first {
     font-size: 17px;
   }
-  
 }
