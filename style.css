@@ -1,16 +1,19 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cause:wght@100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&family=Trispace:wght@100..800&display=swap');
 
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: 'Roboto', sans-serif;
 }
 
 :root {
   --main-yellow: rgb(255, 208, 0);
   --hover-yellow: #ffb100;
-  --bg-dark: rgb(33, 33, 33);
+  --bg-dark: rgb(0, 0, 0);
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
 }
 
 html {
@@ -78,7 +81,10 @@ html {
   transform: scale(1.1);
 }
 
-.order-button {
+.order-button,
+.hero-section-text button,
+.catogory-card-text button,
+.about-me .text button {
   padding: 10px 25px;
   border: none;
   border-radius: 30px;
@@ -91,24 +97,12 @@ html {
   will-change: transform;
 }
 
-.order-button:hover {
+.order-button:hover,
+.hero-section-text button:hover,
+.catogory-card-text button:hover,
+.about-me .text button:hover {
   background-color: var(--hover-yellow);
   transform: scale(1.05);
-}
-
-@media (max-width: 991px) {
-  .nav-inner-wrapper {
-    background-color: var(--bg-dark);
-    padding: 20px;
-    margin-top: 15px;
-    border-radius: 10px;
-    text-align: center;
-  }
-
-  .main-nav-links-right {
-    flex-direction: column;
-    margin-top: 20px;
-  }
 }
 
 section {
@@ -121,12 +115,10 @@ section {
   align-items: center;
   justify-content: space-between;
   padding: 20px;
-  background-color: #333;
-}
-
-.herosection-image {
-  width: 50%;
-  height: auto;
+  background-image: url("hero-bg (1).jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 
 .hero-section-text {
@@ -147,45 +139,6 @@ section {
   }
 }
 
-@media (max-width: 500px) {
-  .herosection-image {
-    height: 40%;
-    width: auto;
-    object-fit: cover;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-  }
-}
-
-@media (max-width: 991px) {
-  .hero-section {
-    flex-direction: column !important;
-    justify-content: center !important;
-    align-items: center !important;
-    padding-top: 100px !important;
-    height: auto !important;
-    min-height: 100vh;
-    background-position: center;
-    background-size: cover;
-  }
-
-  .hero-section-text {
-    width: 100% !important;
-    text-align: center;
-  }
-
-  .hero-section-text button {
-    margin: 15px auto 0;
-    display: block;
-  }
-
-  .herosection-image {
-    width: 80%;
-    margin-top: 20px;
-  }
-}
-
 .hero-section-text h2 {
   color: white;
   font-size: 30px;
@@ -196,24 +149,6 @@ section {
   font-size: 15px;
   font-weight: 400;
   color: rgb(226, 226, 226);
-}
-
-.hero-section-text button {
-  padding: 10px 25px;
-  border: none;
-  border-radius: 30px;
-  background-color: var(--main-yellow);
-  color: black;
-  font-weight: 500;
-  font-size: 16px;
-  white-space: nowrap;
-  transition: all 0.3s ease-in-out;
-  will-change: transform;
-}
-
-.hero-section-text button:hover {
-  background-color: var(--hover-yellow);
-  transform: scale(1.05);
 }
 
 .menu-section {
@@ -240,28 +175,27 @@ section {
   gap: 50px;
 }
 
-.catogory-card {
-  padding: 15px;
-  flex: 1 1 350px;
-  max-width: 450px;
-  background-color: rgb(49, 49, 49);
+.catogory-card,
+.recipe {
+  background-color: var(--bg-dark);
   border-radius: 12px;
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-  color: white;
   transition: all 0.3s ease;
 }
 
-.catogory-card:hover {
+.catogory-card:hover,
+.recipe:hover {
   transform: translateY(-5px);
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
-@media screen and (max-width:500px) {
-  .catogory-card {
-    justify-content: center;
-  }
+.catogory-card {
+  padding: 15px;
+  flex: 1 1 350px;
+  max-width: 450px;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  color: white;
 }
 
 .catogory-card img {
@@ -290,24 +224,6 @@ section {
 
 .catogory-card-text p span {
   font-size: 15px;
-}
-
-.catogory-card-text button {
-  padding: 5px 15px;
-  border: none;
-  border-radius: 30px;
-  background-color: var(--main-yellow);
-  color: black;
-  font-weight: 500;
-  font-size: 16px;
-  white-space: nowrap;
-  transition: all 0.3s ease-in-out;
-  will-change: transform;
-}
-
-.catogory-card-text button:hover {
-  background-color: var(--hover-yellow);
-  transform: scale(1.05);
 }
 
 .Food-recipes {
@@ -348,16 +264,8 @@ section {
 }
 
 .recipe {
-  background-color: rgb(49, 49, 49);
-  border-radius: 12px;
   flex: 1 1 300px;
   max-width: 350px;
-  transition: all 0.3s ease;
-}
-
-.recipe:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
 .recipe img {
@@ -422,7 +330,7 @@ section {
 .about-me {
   min-height: 100vh;
   padding: 20px;
-  background-color: #333;
+  background-color: var(--bg-dark);
   color: white;
   position: relative;
   display: flex;
@@ -461,53 +369,6 @@ section {
   font-weight: 500;
 }
 
-.about-me .text button {
-  padding: 10px 25px;
-  border: none;
-  border-radius: 30px;
-  background-color: var(--main-yellow);
-  color: black;
-  font-weight: 500;
-  font-size: 16px;
-  white-space: nowrap;
-  transition: all 0.3s ease-in-out;
-  will-change: transform;
-}
-
-.about-me .text button:hover {
-  background-color: var(--hover-yellow);
-  transform: scale(1.05);
-}
-
-@media screen and (max-width: 991px) {
-  .about-me {
-    flex-direction: column;
-    justify-content: flex-start;
-    padding-top: 50px;
-    gap: 30px;
-  }
-
-  .about-me .text {
-    position: relative;
-    top: 0;
-    right: 0;
-    transform: none;
-    width: 90%;
-    margin: 0 auto;
-  }
-
-  .about-me-photo {
-    width: 100%;
-    padding: 0;
-    justify-content: center;
-  }
-
-  .about-me-photo img {
-    width: 80%;
-    height: auto;
-  }
-}
-
 .book {
   padding: 3%;
   min-height: 100vh;
@@ -531,7 +392,8 @@ section {
   width: 65%;
 }
 
-.book-form form input {
+.book-form form input,
+.book-form select {
   padding: 5px 10px;
   border: 2px solid lightgray;
   border-radius: 8px;
@@ -543,9 +405,6 @@ section {
 
 .book-form select {
   width: 100%;
-  padding: 5px 10px;
-  border: 2px solid lightgray;
-  border-radius: 8px;
   color: #333;
   font-size: 15px;
   background-color: white;
@@ -634,7 +493,7 @@ section {
 }
 
 .comment-card {
-  background-color: rgb(51, 51, 51);
+  background-color: var(--bg-dark);
   padding: 20px;
   border-radius: 12px;
   display: flex;
@@ -648,6 +507,7 @@ section {
   font-size: 14px;
   font-weight: 400;
   color: rgb(219, 219, 219);
+  font-family: 'Cause', sans-serif;
 }
 
 .comment-card h3 {
@@ -667,50 +527,9 @@ section {
   border: 4px solid darkorange;
 }
 
-@media screen and (max-width: 991px) {
-  .book {
-    grid-template-columns: 1fr;
-  }
-
-  .date-input {
-    width: 100%;
-  }
-
-  .book-form {
-    grid-column: 1 / 2;
-    width: 100%;
-  }
-
-  .book-form form {
-    width: 90%;
-    margin: 0 auto;
-  }
-
-  .book-form h3,
-  .book-form input[type='submit'] {
-    align-self: center;
-  }
-
-  .map {
-    grid-column: 1 / 2;
-    min-height: 400px;
-    width: 100%;
-  }
-
-  .users-comment {
-    grid-column: 1 / 2;
-    width: 90%;
-  }
-
-  .users-comment-card {
-    flex-direction: column;
-    align-items: center;
-  }
-}
-
 .footer {
   padding: 4%;
-  background-color: rgb(51, 51, 51);
+  background-color: var(--bg-dark);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -769,7 +588,8 @@ section {
   color: lightgray;
 }
 
-.footer-icons, .first {
+.footer-icons,
+.first {
   display: flex;
   align-items: center;
   gap: 10px;
@@ -804,6 +624,109 @@ hr {
 }
 
 @media screen and (max-width: 991px) {
+  .nav-inner-wrapper {
+    background-color: var(--bg-dark);
+    padding: 20px;
+    margin-top: 15px;
+    border-radius: 10px;
+    text-align: center;
+  }
+
+  .main-nav-links-right {
+    flex-direction: column;
+    margin-top: 20px;
+  }
+
+  .hero-section {
+    flex-direction: column !important;
+    justify-content: center !important;
+    align-items: center !important;
+    padding-top: 100px !important;
+    height: auto !important;
+    min-height: 100vh;
+  }
+
+  .hero-section-text {
+    width: 100% !important;
+    text-align: center;
+  }
+
+  .hero-section-text button {
+    margin: 15px auto 0;
+    display: block;
+  }
+
+  .herosection-image {
+    width: 80%;
+    margin-top: 20px;
+  }
+
+  .about-me {
+    flex-direction: column;
+    justify-content: flex-start;
+    padding-top: 50px;
+    gap: 30px;
+  }
+
+  .about-me .text {
+    position: relative;
+    top: 0;
+    right: 0;
+    transform: none;
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .about-me-photo {
+    width: 100%;
+    padding: 0;
+    justify-content: center;
+  }
+
+  .about-me-photo img {
+    width: 80%;
+    height: auto;
+  }
+
+  .book {
+    grid-template-columns: 1fr;
+  }
+
+  .date-input {
+    width: 100%;
+  }
+
+  .book-form {
+    grid-column: 1 / 2;
+    width: 100%;
+  }
+
+  .book-form form {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .book-form h3,
+  .book-form input[type='submit'] {
+    align-self: center;
+  }
+
+  .map {
+    grid-column: 1 / 2;
+    min-height: 400px;
+    width: 100%;
+  }
+
+  .users-comment {
+    grid-column: 1 / 2;
+    width: 90%;
+  }
+
+  .users-comment-card {
+    flex-direction: column;
+    align-items: center;
+  }
+
   .footer-up {
     flex-direction: column;
     align-items: center;
@@ -819,8 +742,23 @@ hr {
   }
 }
 
-@media screen and (max-width:500px) {
-  .footer-icons, .first {
+@media screen and (max-width: 500px) {
+  .hero-section {
+    position: relative;
+  }
+
+  .hero-section-text {
+    position: absolute;
+    top: 20%;
+    transform: translate(-50%, -50%);
+  }
+
+  .catogory-card {
+    justify-content: center;
+  }
+
+  .footer-icons,
+  .first {
     font-size: 17px;
   }
 }
