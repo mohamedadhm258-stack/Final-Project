@@ -128,6 +128,7 @@ section {
   position: relative;
 }
 
+
 @keyframes timing {
   from {
     transform: translate(-100px, -100px);
@@ -749,7 +750,7 @@ hr {
 
   .hero-section-text {
     position: absolute;
-    top: 20%;
+    top: 15%;
     transform: translate(-50%, -50%);
   }
 
